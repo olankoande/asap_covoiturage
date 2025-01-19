@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply antialiased text-gray-900 bg-gray-50;
+  }
+}
+
+@layer components {
+  .form-input {
+    @apply block w-full px-4 py-3 rounded-xl border-gray-200 bg-white shadow-sm focus:border-asap-500 focus:ring focus:ring-asap-200 focus:ring-opacity-50;
+  }
+
+  .form-checkbox {
+    @apply rounded text-asap-600 focus:ring-asap-500 border-gray-300;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-xl font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors;
+  }
+
+  .btn-primary {
+    @apply bg-asap-600 text-white hover:bg-asap-700 focus:ring-asap-500;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-asap-600 border-asap-600 hover:bg-asap-50 focus:ring-asap-500;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-asap p-6 md:p-8;
+  }
+
+  .card-hover {
+    @apply transition-shadow hover:shadow-asap-lg;
+  }
+}
+
+.aspect-w-4 {
+  position: relative;
+  padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
+}
+
+.aspect-h-3 {
+  --tw-aspect-h: 3;
+}
+
+.aspect-w-4 {
+  --tw-aspect-w: 4;
+}
+
+.aspect-w-4 > * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
